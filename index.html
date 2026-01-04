@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Rohan - Graphic Designer & Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-content">
+            <a href="#" class="logo">Rohan<span class="accent">.</span>Vibe</a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact" class="btn btn-small">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <span class="overline">Portfolio 2025</span>
+                <h1>Designing Interfaces.<br>Building <span class="text-gradient">Vibes.</span></h1>
+                <p class="lead">I am a Graphic Designer, Illustrator, and Creative Coder focused on crafting unique digital experiences.</p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">View Work</a>
+                    <a href="#contact" class="btn btn-outline">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section bg-secondary">
+            <div class="container grid-2-col">
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>I am a passionate Graphic Designer and Illustrator who loves to code. I call myself a "Vibe Coder" because I focus on the feeling and aesthetic of the products I build.</p>
+                    <p>My approach blends artistic creativity with technical skills. Whether it's digital illustration or web development, I strive to create engaging and visually stunning work.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <h3>3+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>20+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>100%</h3>
+                        <p>Commitment</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Technical Expertise</h2>
+                    <p>A curated toolset for modern web development.</p>
+                </div>
+                <div class="skills-grid">
+                    <!-- Design -->
+                    <div class="skill-category">
+                        <h3>Design</h3>
+                        <ul class="skill-list">
+                            <li>UI/UX Design</li>
+                            <li>Figma & Prototyping</li>
+                            <li>Visual Hierarchy</li>
+                            <li>Design Systems</li>
+                        </ul>
+                    </div>
+                    <!-- Development -->
+                    <div class="skill-category">
+                        <h3>Development</h3>
+                        <ul class="skill-list">
+                            <li>HTML5 & Semantic Web</li>
+                            <li>CSS3 / SCSS / Variables</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>Responsive Layouts</li>
+                        </ul>
+                    </div>
+                    <!-- Workflow -->
+                    <div class="skill-category">
+                        <h3>Workflow & Tools</h3>
+                        <ul class="skill-list">
+                            <li>Git & Version Control</li>
+                            <li>AI-Assisted Dev</li>
+                            <li>Agile / Fast Iteration</li>
+                            <li>Problem Solving</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section bg-secondary">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Selected Work</h2>
+                    <p>Recent projects showcasing design and code capabilities.</p>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card">
+                        <div class="project-image"></div>
+                        <div class="project-content">
+                            <h3>Personal Portfolio</h3>
+                            <p>This responsive website, designed and built from scratch to showcase my skills in design and development.</p>
+                            <div class="tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>Design</span>
+                            </div>
+                            <a href="#" class="link-arrow">View Source &rarr;</a>
+                        </div>
+                    </article>
+                    <!-- Project 2 -->
+                    <article class="project-card">
+                        <div class="project-image"></div>
+                        <div class="project-content">
+                            <h3>YouTube Illustrations</h3>
+                            <p>A collection of my digital illustrations and creative process videos shared with my community.</p>
+                            <div class="tags">
+                                <span>Illustration</span>
+                                <span>YouTube</span>
+                                <span>Art</span>
+                            </div>
+                            <a href="https://www.youtube.com/channel/UCVEH5mZUQzf2I1-pEkXlOrQ" target="_blank" class="link-arrow">Visit Channel &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container contact-wrapper">
+                <div class="contact-intro">
+                    <h2>Let's Work Together</h2>
+                    <p>Have a project in mind? I'm currently available for freelance work and full-time opportunities.</p>
+                    <a href="mailto:maheshkumar79759@gmail.com" class="email-link">maheshkumar79759@gmail.com</a>
+                </div>
+                <form class="contact-form" onsubmit="event.preventDefault();">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Jane Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="jane@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary full-width">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2025 Portfolio. Designed & Built by Rohan.</p>
+            <div class="social-links">
+                <a href="#">LinkedIn</a>
+                <a href="#">GitHub</a>
+                <a href="https://www.youtube.com/channel/UCVEH5mZUQzf2I1-pEkXlOrQ" target="_blank">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
