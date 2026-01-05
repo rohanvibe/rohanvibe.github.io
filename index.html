@@ -28,7 +28,7 @@
     <main>
         <!-- Hero Section -->
         <section class="hero">
-            <div class="container hero-content">
+            <div class="container hero-content animate-on-scroll">
                 <span class="overline">Portfolio 2026</span>
                 <h1>Designing Interfaces.<br>Building <span class="text-gradient">Vibes.</span></h1>
                 <p class="lead">I am a Graphic Designer, Illustrator, and Creative Coder focused on crafting unique digital experiences.</p>
@@ -42,12 +42,12 @@
         <!-- About Section -->
         <section id="about" class="section bg-secondary">
             <div class="container grid-2-col">
-                <div class="about-text">
+                <div class="about-text animate-on-scroll">
                     <h2>About Me</h2>
                     <p>I am a passionate Graphic Designer and Illustrator who loves to code. I call myself a "Vibe Coder" because I focus on the feeling and aesthetic of the products I build.</p>
                     <p>My approach blends artistic creativity with technical skills. Whether it's digital illustration or web development, I strive to create engaging and visually stunning work.</p>
                 </div>
-                <div class="about-stats">
+                <div class="about-stats animate-on-scroll">
                     <div class="stat-card">
                         <h3>3+</h3>
                         <p>Years Experience</p>
@@ -67,11 +67,11 @@
         <!-- Skills Section -->
         <section id="skills" class="section">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header animate-on-scroll">
                     <h2>Technical Expertise</h2>
                     <p>A curated toolset for modern web development.</p>
                 </div>
-                <div class="skills-grid">
+                <div class="skills-grid animate-on-scroll">
                     <!-- Design -->
                     <div class="skill-category">
                         <h3>Design</h3>
@@ -109,14 +109,14 @@
         <!-- Projects Section -->
         <section id="projects" class="section bg-secondary">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header animate-on-scroll">
                     <h2>Selected Work</h2>
                     <p>Recent projects showcasing design and code capabilities.</p>
                 </div>
-                <div class="projects-grid">
+                <div class="projects-grid animate-on-scroll">
                     <!-- Project 1 -->
                     <article class="project-card">
-                        <img src="project-1.png" alt="Personal Portfolio Website" class="project-image" style="width: 100%; height: 200px; object-fit: cover;">
+                        <img src="project-1.png" alt="Personal Portfolio Website" class="project-image">
                         <div class="project-content">
                             <h3>Personal Portfolio</h3>
                             <p>This responsive website, designed and built from scratch to showcase my skills in design and development.</p>
@@ -130,7 +130,7 @@
                     </article>
                     <!-- Project 2 -->
                     <article class="project-card">
-                        <img src="project-2.png" alt="YouTube Illustrations" class="project-image" style="width: 100%; height: 200px; object-fit: cover;">
+                        <img src="project-2.png" alt="YouTube Illustrations" class="project-image">
                         <div class="project-content">
                             <h3>YouTube Illustrations</h3>
                             <p>A collection of my digital illustrations and creative process videos shared with my community.</p>
@@ -148,7 +148,7 @@
 
         <!-- Contact Section -->
         <section id="contact" class="section">
-            <div class="container contact-wrapper">
+            <div class="container contact-wrapper animate-on-scroll">
                 <div class="contact-intro">
                     <h2>Let's Work Together</h2>
                     <p>Have a project in mind? I'm currently available for freelance work and full-time opportunities.</p>
@@ -183,5 +183,17 @@
         </div>
     </footer>
 
+    <!-- Scroll Animation Script -->
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.animate-on-scroll').forEach((el) => observer.observe(el));
+    </script>
 </body>
 </html>

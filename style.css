@@ -89,10 +89,16 @@ ul {
 }
 
 .text-gradient {
-    background: linear-gradient(90deg, var(--accent), #a855f7);
+    background: linear-gradient(to right, var(--accent), #a855f7, var(--accent));
+    background-size: 200% auto;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: gradientFlow 3s linear infinite;
+}
+
+@keyframes gradientFlow {
+    to { background-position: 200% center; }
 }
 
 /* TYPOGRAPHY */
@@ -264,6 +270,13 @@ p {
     padding: var(--space-4);
     border-radius: var(--radius);
     border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 30px -10px rgba(6, 182, 212, 0.15);
 }
 
 .skill-list li {
@@ -289,15 +302,15 @@ p {
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
     border-color: var(--accent);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
 }
 
 .project-image {
+    width: 100%;
     height: 200px;
-    background-color: #334155;
-    background-image: linear-gradient(45deg, #334155 25%, #475569 25%, #475569 50%, #334155 50%, #334155 75%, #475569 75%, #475569 100%);
-    background-size: 20px 20px;
+    object-fit: cover;
 }
 
 .project-content {
@@ -429,4 +442,16 @@ p {
     .social-links {
         margin-top: 0;
     }
+}
+
+/* SCROLL ANIMATIONS */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
