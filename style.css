@@ -72,6 +72,29 @@ ul {
     list-style: none;
 }
 
+/* CUSTOM SCROLLBAR */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+
+::selection {
+    background: var(--accent);
+    color: #fff;
+}
+
 /* UTILITIES */
 .container {
     width: 90%;
@@ -196,6 +219,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column; /* Mobile layout: Stack logo and nav */
 }
 
 .logo {
@@ -208,7 +232,11 @@ p {
 }
 
 .nav-list {
-    display: none; /* Mobile first hidden */
+    display: flex;
+    gap: var(--space-3);
+    margin-top: var(--space-2);
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 /* HERO */
@@ -374,6 +402,7 @@ p {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.2);
 }
 
 .email-link {
@@ -411,10 +440,13 @@ p {
 @media (min-width: 768px) {
     h1 { font-size: 3.5rem; }
     
+    .header-content {
+        flex-direction: row; /* Desktop layout: Side by side */
+    }
+
     .nav-list {
-        display: flex;
         gap: var(--space-4);
-        align-items: center;
+        margin-top: 0;
     }
     
     .grid-2-col {
